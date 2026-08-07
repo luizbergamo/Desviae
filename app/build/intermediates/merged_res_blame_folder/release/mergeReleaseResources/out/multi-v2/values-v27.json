@@ -1,0 +1,28 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.example.dodger.app-mergeReleaseResources-28:/values-v27/values-v27.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\luizb\\Documents\\Codex\\2026-07-25\\q\\outputs\\AndroidStudioGame\\app\\src\\main\\res\\values-v27\\styles.xml",
+                    "from": {
+                        "startLines": "1",
+                        "startColumns": "4",
+                        "startOffsets": "17",
+                        "endLines": "6",
+                        "endColumns": "12",
+                        "endOffsets": "343"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "7",
+                        "endColumns": "12",
+                        "endOffsets": "376"
+                    }
+                }
+            ]
+        }
+    ]
+}

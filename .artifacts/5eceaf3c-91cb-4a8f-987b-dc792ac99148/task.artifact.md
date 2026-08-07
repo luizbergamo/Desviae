@@ -1,0 +1,11 @@
+- `[x]` Update `app/build.gradle` to target API 36
+- `[x]` Increment app version to 1.0.4 (Build 5)
+- `[x]` Address Android 16 behavior changes
+    - `[x]` Update `AndroidManifest.xml` (appCategory="game")
+    - `[x]` Update `styles.xml` (Modern edge-to-edge)
+    - `[x]` Update `MainActivity.kt` (Enable Edge-to-Edge)
+    - `[x]` Update `GameView.kt` (Handle system insets for score position)
+- `[x]` Fix theme incompatibility crash
+    - `[x]` Update `res/values/styles.xml` to use AppCompat theme
+    - `[x]` Update `res/values-v27/styles.xml` to use AppCompat theme
+- `[x]` Align Kotlin versions for stability

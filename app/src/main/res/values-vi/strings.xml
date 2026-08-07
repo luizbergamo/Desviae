@@ -1,0 +1,6 @@
+<resources>
+    <string name="score_label">Điểm: %d</string>
+    <string name="best_score_label">Kỷ lục: %d</string>
+    <string name="game_over_title">Trò chơi kết thúc</string>
+    <string name="restart_hint">Chạm để chơi lại</string>
+</resources>

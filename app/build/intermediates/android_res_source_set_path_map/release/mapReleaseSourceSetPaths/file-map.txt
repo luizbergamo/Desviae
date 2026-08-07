@@ -1,0 +1,10 @@
+com.example.dodger.app-pngs-0 C:\Users\luizb\Documents\Codex\2026-07-25\q\outputs\AndroidStudioGame\app\build\generated\res\pngs\release
+com.example.dodger.app-resValues-1 C:\Users\luizb\Documents\Codex\2026-07-25\q\outputs\AndroidStudioGame\app\build\generated\res\resValues\release
+com.example.dodger.app-updated_navigation_xml-2 C:\Users\luizb\Documents\Codex\2026-07-25\q\outputs\AndroidStudioGame\app\build\generated\updated_navigation_xml\release
+com.example.dodger.app-packageReleaseResources-3 C:\Users\luizb\Documents\Codex\2026-07-25\q\outputs\AndroidStudioGame\app\build\intermediates\incremental\release\packageReleaseResources\merged.dir
+com.example.dodger.app-packageReleaseResources-4 C:\Users\luizb\Documents\Codex\2026-07-25\q\outputs\AndroidStudioGame\app\build\intermediates\incremental\release\packageReleaseResources\stripped.dir
+com.example.dodger.app-merged-not-compiled-resources-5 C:\Users\luizb\Documents\Codex\2026-07-25\q\outputs\AndroidStudioGame\app\build\intermediates\merged-not-compiled-resources\release
+com.example.dodger.app-release-6 C:\Users\luizb\Documents\Codex\2026-07-25\q\outputs\AndroidStudioGame\app\build\intermediates\merged_res\release\mergeReleaseResources
+com.example.dodger.app-main-7 C:\Users\luizb\Documents\Codex\2026-07-25\q\outputs\AndroidStudioGame\app\src\main\res
+com.example.dodger.app-release-8 C:\Users\luizb\Documents\Codex\2026-07-25\q\outputs\AndroidStudioGame\app\src\release\res
+gradleHome-0 C:\Users\luizb\.gradle

@@ -1,0 +1,4 @@
+#Thu Jul 30 02:26:46 BRT 2026
+base.0=C\:\\Users\\luizb\\Documents\\Codex\\2026-07-25\\q\\outputs\\AndroidStudioGame\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

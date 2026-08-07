@@ -1,0 +1,6 @@
+<resources>
+    <string name="score_label">คะแนน: %d</string>
+    <string name="best_score_label">สถิติสูงสุด: %d</string>
+    <string name="game_over_title">จบเกม</string>
+    <string name="restart_hint">แตะเพื่อเล่นอีกครั้ง</string>
+</resources>
