@@ -5,6 +5,9 @@ import android.graphics.Canvas
 import android.graphics.Color
 import android.graphics.Paint
 import android.graphics.RectF
+import android.media.AudioAttributes
+import android.media.SoundPool
+import android.util.Log
 import android.view.MotionEvent
 import android.view.View
 import androidx.core.view.ViewCompat
@@ -19,7 +22,14 @@ class GameView(context: Context) : View(context) {
     private val obstacles = mutableListOf<RectF>()
     private val player = RectF()
 
+    private var soundPool: SoundPool? = null
+    private var bgSoundId = 0
+    private var collisionSoundId = 0
+    private var bgStreamId = 0
+    private var isAudioLoaded = false
+
     private var playerSize = 0f
+    private var controlAreaHeight = 0f
     private var targetX = 0f
     private var score = 0
     private var bestScore = 0
@@ -43,10 +53,54 @@ class GameView(context: Context) : View(context) {
             insetRight = systemInsets.right.toFloat()
             insets
         }
+        initAudio()
+    }
+
+    private fun initAudio() {
+        try {
+            val audioAttributes = AudioAttributes.Builder()
+                .setUsage(AudioAttributes.USAGE_GAME)
+                .setContentType(AudioAttributes.CONTENT_TYPE_MUSIC)
+                .build()
+
+            soundPool = SoundPool.Builder()
+                .setMaxStreams(3)
+                .setAudioAttributes(audioAttributes)
+                .build()
+
+            soundPool?.setOnLoadCompleteListener { _, _, _ ->
+                isAudioLoaded = true
+            }
+
+            val bgResId = context.resources.getIdentifier("game_music", "raw", context.packageName)
+            if (bgResId != 0) {
+                bgSoundId = soundPool?.load(context, bgResId, 1) ?: 0
+            }
+
+            val collisionResId = context.resources.getIdentifier("collision", "raw", context.packageName)
+            if (collisionResId != 0) {
+                collisionSoundId = soundPool?.load(context, collisionResId, 1) ?: 0
+            }
+        } catch (e: Exception) {
+            Log.e("GameView", "Error initializing audio: ${e.message}")
+        }
+    }
+
+    fun pauseMusic() {
+        if (bgStreamId != 0) {
+            soundPool?.pause(bgStreamId)
+        }
+    }
+
+    fun resumeMusic() {
+        if (bgStreamId != 0 && !gameOver) {
+            soundPool?.resume(bgStreamId)
+        }
     }
 
     override fun onSizeChanged(width: Int, height: Int, oldWidth: Int, oldHeight: Int) {
         playerSize = width * 0.16f
+        controlAreaHeight = height * 0.15f
         targetX = width / 2f
         resetGame()
     }
@@ -68,7 +122,7 @@ class GameView(context: Context) : View(context) {
         val nextCenter = center + (targetX - center) * min(1f, dt * 12f)
         val half = playerSize / 2f
         val left = (nextCenter - half).coerceIn(0f, width - playerSize)
-        player.set(left, height - playerSize * 1.8f, left + playerSize, height - playerSize * 0.8f)
+        player.set(left, height - controlAreaHeight - playerSize * 1.5f, left + playerSize, height - controlAreaHeight - playerSize * 0.5f)
 
         spawnTimer -= dt
         if (spawnTimer <= 0f) {
@@ -85,6 +139,13 @@ class GameView(context: Context) : View(context) {
             when {
                 RectF.intersects(player, obstacle) -> {
                     gameOver = true
+                    if (bgStreamId != 0) {
+                        soundPool?.stop(bgStreamId)
+                        bgStreamId = 0
+                    }
+                    if (collisionSoundId != 0) {
+                        soundPool?.play(collisionSoundId, 1f, 1f, 1, 0, 1f)
+                    }
                     if (score > bestScore) {
                         bestScore = score
                         prefs.edit().putInt("best_score", bestScore).apply()
@@ -123,6 +184,20 @@ class GameView(context: Context) : View(context) {
             paint.textSize = 38f
             canvas.drawText(context.getString(R.string.restart_hint), width / 2f, height * 0.50f, paint)
         }
+
+        // Draw Control Area
+        paint.color = Color.argb(80, 0, 0, 0)
+        canvas.drawRect(0f, height - controlAreaHeight, width.toFloat(), height.toFloat(), paint)
+
+        paint.color = Color.argb(140, 255, 255, 255)
+        paint.textSize = 32f
+        paint.textAlign = Paint.Align.CENTER
+        canvas.drawText(
+            context.getString(R.string.control_hint),
+            width / 2f,
+            height - controlAreaHeight / 2f + 12f,
+            paint
+        )
     }
 
     private fun spawnObstacle() {
@@ -139,8 +214,20 @@ class GameView(context: Context) : View(context) {
         spawnTimer = 0.45f
         lastFrameTime = 0L
 
+        if (isAudioLoaded && bgSoundId != 0) {
+            if (bgStreamId != 0) soundPool?.stop(bgStreamId)
+            bgStreamId = soundPool?.play(bgSoundId, 0.6f, 0.6f, 1, -1, 1f) ?: 0
+        }
+
         val half = playerSize / 2f
-        player.set(targetX - half, height - playerSize * 1.8f, targetX + half, height - playerSize * 0.8f)
+        player.set(targetX - half, height - controlAreaHeight - playerSize * 1.5f, targetX + half, height - controlAreaHeight - playerSize * 0.5f)
+    }
+
+    override fun onDetachedFromWindow() {
+        super.onDetachedFromWindow()
+        soundPool?.release()
+        soundPool = null
+        bgStreamId = 0
     }
 
     override fun onTouchEvent(event: MotionEvent): Boolean {
