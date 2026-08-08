@@ -1,4 +1,4 @@
-#Sat Aug 01 12:07:17 BRT 2026
+#Sat Aug 08 01:13:04 BRT 2026
 base.0=C\:\\Users\\luizb\\Documents\\Codex\\2026-07-25\\q\\outputs\\AndroidStudioGame\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\luizb\\Documents\\Codex\\2026-07-25\\q\\outputs\\AndroidStudioGame\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.2=C\:\\Users\\luizb\\Documents\\Codex\\2026-07-25\\q\\outputs\\AndroidStudioGame\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\6\\classes.dex

@@ -1,0 +1,48 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\luizb\\.gradle\\daemon\\9.5.0\\com.example.dodger.app-mergeReleaseResources-28:\\values-zh\\values-zh.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\luizb\\Documents\\Codex\\2026-07-25\\q\\outputs\\AndroidStudioGame\\app\\src\\main\\res\\values-zh\\strings.xml",
+                    "from": {
+                        "startLines": "2,3,4,1",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "65,120,170,17",
+                        "endColumns": "53,48,46,46",
+                        "endOffsets": "114,164,212,59"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,109,158,205",
+                        "endColumns": "53,48,46,46",
+                        "endOffsets": "104,153,200,247"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "com.example.dodger.app-mergeReleaseResources-28:/values-zh/values-zh.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\luizb\\Documents\\Codex\\2026-07-25\\q\\outputs\\AndroidStudioGame\\app\\src\\main\\res\\values-zh\\strings.xml",
+                    "from": {
+                        "startLines": "1,-1,6,-1,-1,-1",
+                        "startColumns": "4,-1,4,-1,-1,-1",
+                        "startOffsets": "17,-1,259,-1,-1,-1",
+                        "endColumns": "39,-1,48,-1,-1,-1",
+                        "endOffsets": "52,-1,303,-1,-1,-1"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "55,95,149,198,247,294",
+                        "endColumns": "39,53,48,48,46,46",
+                        "endOffsets": "90,144,193,242,289,336"
+                    }
+                }
+            ]
+        }
+    ]
+}

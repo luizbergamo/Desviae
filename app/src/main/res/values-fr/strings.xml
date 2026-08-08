@@ -1,6 +1,8 @@
 <resources>
+    <string name="app_name">Esquive-le</string>
     <string name="score_label">Points: %d</string>
     <string name="best_score_label">Meilleur score: %d</string>
     <string name="game_over_title">Jeu terminé</string>
     <string name="restart_hint">Touchez pour rejouer</string>
+    <string name="control_hint">Glissez ici pour déplacer</string>
 </resources>

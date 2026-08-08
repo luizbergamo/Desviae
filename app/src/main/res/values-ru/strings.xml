@@ -1,6 +1,8 @@
 <resources>
+    <string name="app_name">Уворачивайся</string>
     <string name="score_label">Очки: %d</string>
     <string name="best_score_label">Рекорд: %d</string>
     <string name="game_over_title">Игра окончена</string>
     <string name="restart_hint">Нажмите, чтобы играть снова</string>
+    <string name="control_hint">Проведите здесь, чтобы переместить</string>
 </resources>

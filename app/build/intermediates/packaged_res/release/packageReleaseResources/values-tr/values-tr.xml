@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Kaçın</string>
+    <string name="best_score_label">En Yüksek Puan: %d</string>
+    <string name="control_hint">Taşımak için buraya kaydırın</string>
+    <string name="game_over_title">Oyun Bitti</string>
+    <string name="restart_hint">Tekrar oynamak için dokun</string>
+    <string name="score_label">Puan: %d</string>
+</resources>

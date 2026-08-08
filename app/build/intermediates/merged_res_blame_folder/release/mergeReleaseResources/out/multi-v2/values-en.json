@@ -1,0 +1,48 @@
+{
+    "logs": [
+        {
+            "outputFile": "C:\\Users\\luizb\\.gradle\\daemon\\9.5.0\\com.example.dodger.app-mergeReleaseResources-28:\\values-en\\values-en.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\luizb\\Documents\\Codex\\2026-07-25\\q\\outputs\\AndroidStudioGame\\app\\src\\main\\res\\values-en\\strings.xml",
+                    "from": {
+                        "startLines": "2,3,4,1",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "68,129,184,17",
+                        "endColumns": "59,53,58,49",
+                        "endOffsets": "123,178,238,62"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "55,115,169,228",
+                        "endColumns": "59,53,58,49",
+                        "endOffsets": "110,164,223,273"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "com.example.dodger.app-mergeReleaseResources-28:/values-en/values-en.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\luizb\\Documents\\Codex\\2026-07-25\\q\\outputs\\AndroidStudioGame\\app\\src\\main\\res\\values-en\\strings.xml",
+                    "from": {
+                        "startLines": "1,-1,6,-1,-1,-1",
+                        "startColumns": "4,-1,4,-1,-1,-1",
+                        "startOffsets": "17,-1,291,-1,-1,-1",
+                        "endColumns": "45,-1,59,-1,-1,-1",
+                        "endOffsets": "58,-1,346,-1,-1,-1"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "55,101,161,221,275,334",
+                        "endColumns": "45,59,59,53,58,49",
+                        "endOffsets": "96,156,216,270,329,379"
+                    }
+                }
+            ]
+        }
+    ]
+}

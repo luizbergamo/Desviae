@@ -6,5 +6,12 @@ drawable ic_launcher_foreground
 drawable ic_launcher_round
 mipmap ic_launcher
 mipmap ic_launcher_round
+raw collision
+raw game_music
 string app_name
+string best_score_label
+string control_hint
+string game_over_title
+string restart_hint
+string score_label
 style AppTheme

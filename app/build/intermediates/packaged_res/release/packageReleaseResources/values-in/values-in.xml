@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Menghindar</string>
+    <string name="best_score_label">Skor Tertinggi: %d</string>
+    <string name="control_hint">Geser di sini untuk memindahkan</string>
+    <string name="game_over_title">Permainan Berakhir</string>
+    <string name="restart_hint">Ketuk untuk bermain lagi</string>
+    <string name="score_label">Skor: %d</string>
+</resources>

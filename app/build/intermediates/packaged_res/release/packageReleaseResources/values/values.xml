@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Dodger Game</string>
+    <string name="app_name">Desviae</string>
+    <string name="best_score_label">High Score: %d</string>
+    <string name="control_hint">Slide here to move</string>
+    <string name="game_over_title">Game Over</string>
+    <string name="restart_hint">Tap to play again</string>
+    <string name="score_label">Score: %d</string>
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowNoTitle">true</item>
         <item name="android:fontFamily">sans</item>

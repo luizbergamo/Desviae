@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ausweichen</string>
+    <string name="best_score_label">Höchstpunktzahl: %d</string>
+    <string name="control_hint">Hier schieben zum Bewegen</string>
+    <string name="game_over_title">Spiel vorbei</string>
+    <string name="restart_hint">Zum erneuten Spielen tippen</string>
+    <string name="score_label">Punkte: %d</string>
+</resources>

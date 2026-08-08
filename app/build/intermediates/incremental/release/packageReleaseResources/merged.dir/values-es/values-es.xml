@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">¡Desvíate!</string>
+    <string name="best_score_label">Récord: %d</string>
+    <string name="control_hint">Desliza aquí para mover</string>
+    <string name="game_over_title">Juego terminado</string>
+    <string name="restart_hint">Toca para jugar de nuevo</string>
+    <string name="score_label">Puntos: %d</string>
+</resources>

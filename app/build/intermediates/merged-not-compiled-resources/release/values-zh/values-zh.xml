@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">闪开</string>
+    <string name="best_score_label">最高纪录: %d</string>
+    <string name="control_hint">在此滑动以移动</string>
+    <string name="game_over_title">游戏结束</string>
+    <string name="restart_hint">点击以重玩</string>
+    <string name="score_label">分数: %d</string>
+</resources>

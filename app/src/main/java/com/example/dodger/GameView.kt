@@ -26,7 +26,7 @@ class GameView(context: Context) : View(context) {
     private var bgSoundId = 0
     private var collisionSoundId = 0
     private var bgStreamId = 0
-    private var isAudioLoaded = false
+    private var shouldPlayBgMusic = false
 
     private var playerSize = 0f
     private var controlAreaHeight = 0f
@@ -68,21 +68,32 @@ class GameView(context: Context) : View(context) {
                 .setAudioAttributes(audioAttributes)
                 .build()
 
-            soundPool?.setOnLoadCompleteListener { _, _, _ ->
-                isAudioLoaded = true
+            soundPool?.setOnLoadCompleteListener { _, sampleId, status ->
+                if (status == 0 && sampleId == bgSoundId) {
+                    // Music loaded! Check if we should start it now
+                    if (shouldPlayBgMusic && !gameOver) {
+                        playBgMusic()
+                    }
+                }
             }
 
-            val bgResId = context.resources.getIdentifier("game_music", "raw", context.packageName)
-            if (bgResId != 0) {
-                bgSoundId = soundPool?.load(context, bgResId, 1) ?: 0
-            }
-
-            val collisionResId = context.resources.getIdentifier("collision", "raw", context.packageName)
-            if (collisionResId != 0) {
-                collisionSoundId = soundPool?.load(context, collisionResId, 1) ?: 0
-            }
+            bgSoundId = soundPool?.load(context, R.raw.game_music, 1) ?: 0
+            collisionSoundId = soundPool?.load(context, R.raw.collision, 1) ?: 0
         } catch (e: Exception) {
             Log.e("GameView", "Error initializing audio: ${e.message}")
+        }
+    }
+
+    private fun playBgMusic() {
+        if (bgSoundId != 0 && bgStreamId == 0) {
+            bgStreamId = soundPool?.play(bgSoundId, 0.5f, 0.5f, 1, -1, 1f) ?: 0
+        }
+    }
+
+    private fun stopBgMusic() {
+        if (bgStreamId != 0) {
+            soundPool?.stop(bgStreamId)
+            bgStreamId = 0
         }
     }
 
@@ -139,10 +150,8 @@ class GameView(context: Context) : View(context) {
             when {
                 RectF.intersects(player, obstacle) -> {
                     gameOver = true
-                    if (bgStreamId != 0) {
-                        soundPool?.stop(bgStreamId)
-                        bgStreamId = 0
-                    }
+                    shouldPlayBgMusic = false
+                    stopBgMusic()
                     if (collisionSoundId != 0) {
                         soundPool?.play(collisionSoundId, 1f, 1f, 1, 0, 1f)
                     }
@@ -214,10 +223,8 @@ class GameView(context: Context) : View(context) {
         spawnTimer = 0.45f
         lastFrameTime = 0L
 
-        if (isAudioLoaded && bgSoundId != 0) {
-            if (bgStreamId != 0) soundPool?.stop(bgStreamId)
-            bgStreamId = soundPool?.play(bgSoundId, 0.6f, 0.6f, 1, -1, 1f) ?: 0
-        }
+        shouldPlayBgMusic = true
+        playBgMusic()
 
         val half = playerSize / 2f
         player.set(targetX - half, height - controlAreaHeight - playerSize * 1.5f, targetX + half, height - controlAreaHeight - playerSize * 0.5f)

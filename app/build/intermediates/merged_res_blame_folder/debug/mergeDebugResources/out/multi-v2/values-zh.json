@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.example.dodger.app-mergeDebugResources-28:/values-zh/values-zh.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\luizb\\Documents\\Codex\\2026-07-25\\q\\outputs\\AndroidStudioGame\\app\\src\\main\\res\\values-zh\\strings.xml",
+                    "from": {
+                        "startLines": "1,3,6,4,5,2",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "17,106,259,161,211,58",
+                        "endColumns": "39,53,48,48,46,46",
+                        "endOffsets": "52,155,303,205,253,100"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6,7",
+                        "startColumns": "4,4,4,4,4,4",
+                        "startOffsets": "55,95,149,198,247,294",
+                        "endColumns": "39,53,48,48,46,46",
+                        "endOffsets": "90,144,193,242,289,336"
+                    }
+                }
+            ]
+        }
+    ]
+}

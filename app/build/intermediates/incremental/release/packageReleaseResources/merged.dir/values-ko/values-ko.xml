@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">피해봐!</string>
+    <string name="best_score_label">최고 기록: %d</string>
+    <string name="control_hint">이동하려면 여기를 슬라이드하세요</string>
+    <string name="game_over_title">게임 오버</string>
+    <string name="restart_hint">다시 플레이하려면 탭하세요</string>
+    <string name="score_label">점수: %d</string>
+</resources>

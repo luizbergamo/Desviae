@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">مراوغة</string>
+    <string name="best_score_label">الرقم القياسي: %d</string>
+    <string name="control_hint">مرر هنا للتحريك</string>
+    <string name="game_over_title">انتهت اللعبة</string>
+    <string name="restart_hint">انقر للعب مرة أخرى</string>
+    <string name="score_label">النقاط: %d</string>
+</resources>

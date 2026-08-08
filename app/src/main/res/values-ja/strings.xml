@@ -1,6 +1,8 @@
 <resources>
+    <string name="app_name">よけて！</string>
     <string name="score_label">スコア: %d</string>
     <string name="best_score_label">最高記録: %d</string>
     <string name="game_over_title">ゲームオーバー</string>
     <string name="restart_hint">タップしてもう一度プレイ</string>
+    <string name="control_hint">ここをスライドして移動</string>
 </resources>

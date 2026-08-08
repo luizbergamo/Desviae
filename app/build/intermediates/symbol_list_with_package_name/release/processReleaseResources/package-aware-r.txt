@@ -883,6 +883,8 @@ layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
 mipmap ic_launcher
 mipmap ic_launcher_round
+raw collision
+raw game_music
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -912,6 +914,7 @@ string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string androidx_startup
 string app_name
+string best_score_label
 string call_notification_answer_action
 string call_notification_answer_video_action
 string call_notification_decline_action
@@ -919,6 +922,10 @@ string call_notification_hang_up_action
 string call_notification_incoming_text
 string call_notification_ongoing_text
 string call_notification_screening_text
+string control_hint
+string game_over_title
+string restart_hint
+string score_label
 string search_menu_title
 string status_bar_notification_info_overflow
 style AlertDialog_AppCompat

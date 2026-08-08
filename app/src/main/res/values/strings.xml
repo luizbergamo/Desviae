@@ -1,7 +1,8 @@
 <resources>
-    <string name="app_name">Dodger Game</string>
-    <string name="score_label">Pontos: %d</string>
-    <string name="best_score_label">Recorde: %d</string>
-    <string name="game_over_title">Fim de jogo</string>
-    <string name="restart_hint">Toque para jogar de novo</string>
+    <string name="app_name">Desviae</string>
+    <string name="score_label">Score: %d</string>
+    <string name="best_score_label">High Score: %d</string>
+    <string name="game_over_title">Game Over</string>
+    <string name="restart_hint">Tap to play again</string>
+    <string name="control_hint">Slide here to move</string>
 </resources>
