@@ -7472,7 +7472,8 @@ androidx.viewpager.widget.ViewPager$ViewPositionComparator
 androidx.viewpager.widget.ViewPager
 com.example.dodger.R$drawable
 com.example.dodger.R$mipmap
-com.example.dodger.R$raw
+com.example.dodger.R$raw:
+    private void <init>()
 com.example.dodger.R$string:
     public static int app_name
     private void <init>()
@@ -17121,6 +17122,7 @@ com.example.dodger.GameView:
     public float insetBottom
     public static void pauseMusic()
     public static void resumeMusic()
+com.example.dodger.R$raw
 com.example.dodger.R$string
 com.google.common.util.concurrent.ListenableFuture
 kotlin.ExceptionsKt

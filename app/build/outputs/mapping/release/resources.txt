@@ -93,6 +93,8 @@ Marking layout:abc_screen_simple:2131427349 reachable: referenced from in_memory
 Marking id:tag_accessibility_actions:2131230866 reachable: referenced from in_memory_r8_base_classes0.dex
 Marking id:accessibility_action_clickable_span:2131230726 reachable: referenced from in_memory_r8_base_classes0.dex
 Marking id:tag_accessibility_clickable_spans:2131230867 reachable: referenced from in_memory_r8_base_classes0.dex
+Marking raw:game_music:2131558401 reachable: referenced from in_memory_r8_base_classes0.dex
+Marking raw:collision:2131558400 reachable: referenced from in_memory_r8_base_classes0.dex
 Marking string:score_label:2131623976 reachable: referenced from in_memory_r8_base_classes0.dex
 Marking string:best_score_label:2131623965 reachable: referenced from in_memory_r8_base_classes0.dex
 Marking string:game_over_title:2131623974 reachable: referenced from in_memory_r8_base_classes0.dex
@@ -209,7 +211,6 @@ addObserver
 autoStoreLocales
 ContentQueryWrapper.query
 FLAG_CONVERT_TO_PLAIN_TEXT
-raw
 SOURCE_PROCESS_TEXT
 TwilightManager
 ON_ANY
@@ -469,7 +470,6 @@ valueType
 TRACE_TAG_APP
 /data/misc/profiles/cur/0
 state
-game_music
 ACTION_NEXT_HTML_ELEMENT
 config_viewMaxRotaryEncoderFlingVelocity
 drawable
@@ -657,7 +657,6 @@ group
 EmojiCompat.FontRequestEmojiCompatCon...
 ACTION_COPY
 RESULT_UNSUPPORTED_ART_VERSION
-collision
 CANCELLED
 ActivityRecreator
 android.support.v13.view.inputmethod....
@@ -762,7 +761,6 @@ Marking id:accessibility_custom_action_8:2131230757 used because it matches stri
 Marking id:accessibility_custom_action_9:2131230758 used because it matches string pool constant accessibility
 Marking attr:emojiCompatEnabled:2130903166 used because it matches string pool constant emojiCompat
 Marking attr:state_above_anchor:2130903265 used because it matches string pool constant state
-Marking raw:game_music:2131558401 used because it matches string pool constant game_music
 Marking attr:drawableBottomCompat:2130903150 used because it matches string pool constant drawable
 Marking attr:drawableEndCompat:2130903151 used because it matches string pool constant drawable
 Marking attr:drawableLeftCompat:2130903152 used because it matches string pool constant drawable
@@ -807,7 +805,6 @@ Marking attr:windowMinWidthMinor:2130903328 used because it matches string pool 
 Marking attr:windowNoTitle:2130903329 used because it matches string pool constant window
 Marking attr:itemPadding:2130903196 used because it matches string pool constant item
 Marking id:group_divider:2131230806 used because it matches string pool constant group
-Marking raw:collision:2131558400 used because it matches string pool constant collision
 Marking anim:fragment_fast_out_extra_slow_in:2130771992 used because it matches string pool constant fragment
 Marking animator:fragment_close_enter:2130837504 used because it matches string pool constant fragment
 Marking animator:fragment_close_exit:2130837505 used because it matches string pool constant fragment
